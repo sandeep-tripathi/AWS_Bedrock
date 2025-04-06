@@ -18,5 +18,5 @@ response = bedrock.get_foundation_model(modelIdentifier='anthropic.claude-3-5-so
 model_info = response['modelDetails']
 
 # Print model details
-print(model_info['modelName'])
-print(model_info['providerName'])
+print(model_info['modelName'])  # Claude 3.5 Sonnet
+print(model_info['providerName']) # Anthropic
