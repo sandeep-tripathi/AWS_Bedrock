@@ -10,3 +10,13 @@ bedrock = boto3.client(
 models = bedrock.list_foundation_models()
 
 print(f"Connected successfully! Found {len(models['modelSummaries'])} available models.")
+
+
+# Retrieve model details
+response = bedrock.get_foundation_model(modelIdentifier='anthropic.claude-3-5-sonnet-20240620-v1:0')
+
+model_info = response['modelDetails']
+
+# Print model details
+print(model_info['modelName'])
+print(model_info['providerName'])
